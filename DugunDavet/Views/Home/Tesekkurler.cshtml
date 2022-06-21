@@ -1,0 +1,29 @@
+﻿@model DugunDavet.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Teşekkürler</title>
+</head>
+<body>
+    <div>
+        <h1>Bilgilendirme için Teşekkürler. @Model.Ad @Model.Soyad
+        </h1>
+
+        @if(Model.DuguneGelecekMi==true)
+            {
+                @: Düğüne katılımınız için teşekkür ederiz, görüşek üzere:)
+            }
+            else
+            {
+                @: Üzgünüm, Keşke katılsaydınız. 
+            }
+    </div>
+    Düğüne katılanları görmek için lütfen <a asp-action="CevaplariListele">buraya</a>tiklayiniz.
+</body>
+</html>
